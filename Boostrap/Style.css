@@ -1,4 +1,123 @@
-/* Estilo general */
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+    body {
+      padding-top: 100px;
+    }
+
+    /* Estilo de encabezado */
+header {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position:fixed ;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+    .logo {
+      width: 150px;
+      height: 100px;
+      margin-top: 20px;
+    }
+  
+    .nav li a {
+      margin: 0 5px;
+      color: white;
+    }
+  
+    main h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+  
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .carousel {
+      max-width: 100%;
+      max-height: 300px;
+    }
+  
+    img {
+      height: 200px;
+    }
+  
+    .zapas {
+      margin: 20px;
+    }
+  }
+  
+  footer {
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.direcciones {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 10px;
+    align-items: flex-end;
+    font-size:1rem ;
+}
+
+.iconos ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.iconos ul li {
+    display: inline-block;
+    margin-bottom: 20px;
+    align-content: center;
+  }
+  
+  .iconos li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .iconos img {
+    max-height: 20px;
+    margin-left: 5px;
+    align-items: center;
+  }
+  
+  iframe {
+    height: 150px;
+    width: 200px;
+    
+}
+
+.copyright {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    font-size: x-small;
+}
+
+
+
+  /* Media query para escritorio */
+  @media (min-width: 768px) {
+    /* Estilo general */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -176,3 +295,5 @@ footer {
     margin-bottom: 50px;
     margin-top: 50px;
 }
+  }
+  
