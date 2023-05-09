@@ -1,7 +1,9 @@
 /* Media query para dispositivos móviles */
 @media (max-width: 767px) {
     body {
-      padding-top: 100px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
     }
 
     /* Estilo de encabezado */
@@ -50,7 +52,6 @@ header {
     .zapas {
       margin: 20px;
     }
-  }
   
   footer {
     height: 100%;
@@ -99,8 +100,7 @@ header {
   
   iframe {
     height: 150px;
-    width: 200px;
-    
+    width: 200px;    
 }
 
 .copyright {
@@ -113,6 +113,23 @@ header {
     font-size: x-small;
 }
 
+/* Contacto */
+#contacto {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Blog */
+.section-intro{
+    margin: 50px 50px 50px 0px;
+}
+.row{
+    margin-bottom: 50px;
+}
+.lead{
+    font-size: 1rem;
+}
+}
 
 
   /* Media query para escritorio */
@@ -244,14 +261,14 @@ footer {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    align-items: center;
+    align-items: flex-end;
     align-content: flex-start;
 }
 
 .iconos ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     
 }
