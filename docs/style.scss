@@ -206,3 +206,235 @@ $carousel-animation-style: ease-in-out;
 
 }
 
+//Desktop
+// Variables
+$desktop-min-width: 768px;
+$header-height-desktop: 150px;
+$logo-width-desktop: 200px;
+$logo-height-desktop: 150px;
+$font-size-h1-desktop: 2.5rem;
+$font-size-p-desktop: 1.5rem;
+$carousel-max-width-desktop: 60%;
+$carousel-max-height-desktop: 500px;
+$zapas-margin-desktop: 50px;
+$img-hover-scale: 1.1;
+$iframe-width-desktop: 350px;
+
+@media (min-width: $desktop-min-width) {
+  // Estilo general
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 150px;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Blog
+  .section-intro {
+    margin: 50px 50px 50px 0px;
+  }
+
+  .row {
+    margin-bottom: 50px;
+  }
+
+  // Estilo de encabezado
+  header {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: $header-height-desktop;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    .logo {
+      width: $logo-width-desktop;
+      height: $logo-height-desktop;
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+
+    .nav {
+      li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  // Página de inicio
+  main {
+    h1 {
+      font-size: $font-size-h1-desktop;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: $font-size-p-desktop;
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  //carousel
+  $carousel-animation-duration: 0.5s;
+  $carousel-animation-style: ease-in-out;
+
+  .carousel {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: $carousel-max-width-desktop;
+    max-height: $carousel-max-height-desktop;
+    margin-bottom: 100px;
+    
+    animation-name: carouselAnimation;
+    animation-duration: $carousel-animation-duration;
+    animation-timing-function: $carousel-animation-style;
+  }
+  
+  @keyframes carouselAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
+    }
+    
+    to {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  img {
+    height: 300px;
+  }
+  
+
+  // Página de compras
+  .zapas {
+    margin: $zapas-margin-desktop 40px $zapas-margin-desktop 80px;
+  }
+
+  .img-hover:hover {
+    transform: scale($img-hover-scale);
+  }
+
+  // Estilo del pie de página
+  footer {
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .direcciones {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      align-items: flex-end;
+      align-content: flex-start;
+    }
+
+    .iconos {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        li {
+          display: inline-block;
+          margin-bottom: 20px;
+          align-content: center;
+
+          a {
+            color: white;
+            text-decoration: none;
+          }
+
+          img {
+            max-height: 20px;
+            margin-left: 5px;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    iframe {
+      height: 150px;
+      width: $iframe-width-desktop;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    font-size: x-small;
+  }
+
+  // Contacto
+  #contacto {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  //Nosotros
+  .container {
+  .row {
+    .col-md-8 {
+      p {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideAnimation 3s forwards;
+      }
+    }
+  }
+}
+
+@keyframes slideAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+}
