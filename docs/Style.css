@@ -1,58 +1,66 @@
-/* Media query para dispositivos móviles */
 @media (max-width: 767px) {
-    body {
+  body {
     margin: 0;
     font-family: Arial, sans-serif;
     padding-top: 100px;
-    }
-
-    /* Estilo de encabezado */
-header {
+  }
+  header {
     padding: 10px;
     background-color: #333;
     color: white;
-    position:fixed ;
+    position: fixed;
     width: 100%;
     height: 100px;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
-}
-    .logo {
-      width: 150px;
-      height: 100px;
-      margin-top: 20px;
+  }
+  header .logo {
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+  }
+  header .nav li a {
+    margin: 0 5px;
+    color: white;
+  }
+  main h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  main p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .carousel {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 100px;
+    animation-name: carouselAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes carouselAnimation {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) scale(0.8);
     }
-  
-    .nav li a {
-      margin: 0 5px;
-      color: white;
+    to {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
     }
-  
-    main h1 {
-      font-size: 2rem;
-      margin-top: 1rem;
-    }
-  
-    main p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-  
-    .carousel {
-      max-width: 100%;
-      max-height: 300px;
-    }
-  
-    img {
-      height: 200px;
-    }
-  
-    .zapas {
-      margin: 20px;
-    }
-  
+  }
+  img {
+    height: 200px;
+  }
+  .zapas {
+    margin: 20px;
+  }
   footer {
     height: 100%;
     background-color: #333;
@@ -63,241 +71,39 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-
-.direcciones {
+  footer .direcciones {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-left: 10px;
     align-items: flex-end;
-    font-size:1rem ;
-}
-
-.iconos ul {
+    font-size: 1rem;
+  }
+  footer .iconos ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
-}
-
-.iconos ul li {
+  }
+  footer .iconos ul li {
     display: inline-block;
     margin-bottom: 20px;
     align-content: center;
   }
-  
-  .iconos li a {
+  footer .iconos ul li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
   }
-  
-  .iconos img {
+  footer .iconos ul li img {
     max-height: 20px;
     margin-left: 5px;
     align-items: center;
   }
-  
-  iframe {
+  footer iframe {
     height: 150px;
-    width: 200px;    
-}
-
-.copyright {
-    text-align: center;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    position: relative;
-    bottom: 0px;
-    font-size: x-small;
-}
-
-/* Contacto */
-#contacto {
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-/* Blog */
-.section-intro{
-    margin: 50px 50px 50px 0px;
-}
-.row{
-    margin-bottom: 50px;
-}
-.lead{
-    font-size: 1rem;
-}
-}
-
-
-  /* Media query para escritorio */
-  @media (min-width: 768px) {
-    /* Estilo general */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding-top: 150px;
-}
-
-h1, h2, h3 {
-    margin: 0;
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Blog */
-.section-intro{
-    margin: 50px 50px 50px 0px;
-}
-.row{
-    margin-bottom: 50px;
-}
-
-/* Estilo de encabezado */
-header {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    position:fixed ;
-    width: 100%;
-    height:150px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
-.logo {
     width: 200px;
-    height: 150px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-
-.nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.nav li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-/* Pagina de inicio */
-
-main h1{
-    font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 2rem;
-
-}
-main p{
-    font-size: 1.5rem;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-
-.carousel{
-    position: relative;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 60%;
-    max-height: 500px;
-    margin-bottom: 100px;
-    
-}
-img{
-    height: 300px;
-}
-
-/* Estilo de la página de compras */
-
-main h1{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.zapas{
-    margin: 50px 40px 50px 80px;
-}
-
-
-img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.img-hover:hover {
-    transform: scale(1.1);
   }
-
-/* Estilo de pie de página */
-footer {
-    height: 100%;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-.direcciones {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    align-items: flex-end;
-    align-content: flex-start;
-}
-
-.iconos ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    
-}
-
-.iconos ul li {
-    display: inline-block;
-    margin-bottom: 20px;
-    align-content: center;
-
-  }
-  
-  .iconos li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .iconos img {
-    max-height: 20px;
-    margin-left: 5px;
-    align-items: center;
-  }
-  
-  iframe {
-    height: 150px;
-    width: 350px;
-    
-}
-
-.copyright {
+  .copyright {
     text-align: center;
     display: flex;
     width: 100%;
@@ -305,12 +111,33 @@ footer {
     position: relative;
     bottom: 0px;
     font-size: x-small;
-}
-
-/* Contacto */
-#contacto {
+  }
+  #contacto {
     margin-bottom: 50px;
     margin-top: 50px;
-}
   }
-  
+  .section-intro {
+    margin: 50px 50px 50px 0px;
+  }
+  .row {
+    margin-bottom: 50px;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .container .row .col-md-8 p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideAnimation 3s forwards;
+  }
+  @keyframes slideAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}/*# sourceMappingURL=style.css.map */
